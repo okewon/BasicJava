@@ -52,6 +52,77 @@ public class ArithmeticOperator {
 		
 		int h1 = 'A'+1;
 		System.out.println(h1);
+		
+		int h2 = 'D'-'A';
+		System.out.println(h2);
+		
+		int h3 = '5'-'0';
+		System.out.println(h3);
+		
+		//산술 연산자와 대입 연산자를 합해 연산식을 줄여서 표현할 수 있다.
+		int i = 0;
+		
+		i = i+1;
+		System.out.println(i);
+		i += 1;
+		System.out.println(i);
+		i += 2;	//복합연산자
+		System.out.println(i);
+		
+		i = i - 1;
+		i-=1;
+		
+		i=1*2;
+		i*=2;
+		
+		i=i/3;
+		i/=3;
+		
+		i=i%4;
+		i%=4;
+		
+		++i; //전위형 : 변수가 참조되기 전 수행
+		i++; //후위형 : 변수가 참조된 후 수행
+		--i;
+		i--;
+		
+		i=0;
+		System.out.println("++i = " + ++i);
+		i=0;
+		System.out.println("i++ = " + i++);
+		System.out.println(i);
+		
+		//반올림을 하기 위해 0.5를 더하고 소수형을 없애기 위해 int로 형변환 한다.
+		double round = 50.56;
+		System.out.println((int)(round+0.5));
+		System.out.println(Math.round(round)); //소수를 첫째짜리에서 반올림
+		System.out.println((int)(round*10+0.5)/10.0);
+		
+		//다음을 한줄씩 계산해서 최종 결과값을 출력해주세요.
+		//1. 123456 + 654321
+		//2. 1번의 결과값 * 123456
+		//3. 2번의 결과값 / 123456
+		//4. 3번의 결과값 - 654321
+		//5. 4번의 결과값 % 123456
+		
+		long n1 = 123456 + 654321;
+		System.out.println(n1);
+		n1 *= 123456;
+		System.out.println(n1);
+		n1 /= 123456;
+		System.out.println(n1);
+		n1 -= 654321;
+		System.out.println(n1);
+		n1 %= 123456;
+		System.out.println(n1);
+		
+		//3개의 int형 변수를 선언 및 초기화 후 합계의 평균을 구해주세요.
+		//평균은 소수점 둘째자리에서 반올림해주세요.
+		int a5=10;
+		int b5=25;
+		int c5=38;
+		System.out.println("평균 :" + Math.round(((a5+b5+c5)/3.0)*10)/10.0);
+		
 	}
 
 }
