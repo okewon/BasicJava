@@ -6,10 +6,12 @@ public class Exam04 {
 //		[4-1] 다음의 문장들을 조건식으로 표현하라.
 //			1. int형 변수 x가 10보다 크고 20보다 작을 때 true인 조건식
 //				int x = 10;
-//				if(x > 10 && x < 20) {}
+//				if(x > 10 && x < 20) {  }
+//				else {  }
 //			2. char형 변수 ch가 공백이나 탭이 아닐 때 true인 조건식
 //				char ch = ' ';
-//				if(ch != ' ' || ch != '\t') {}
+//				if(ch != ' ' && ch != '\t') {  }
+//				else {  }
 //			3. char형 변수 ch가 ‘x' 또는 ’X'일 때 true인 조건식
 //				char ch == 'x';
 //				if(ch == 'x' || ch == 'X') {}
@@ -22,7 +24,7 @@ public class Exam04 {
 //			6. int형 변수 year가 400으로 나눠떨어지거나 또는 4로 나눠떨어지고 100으로 나눠떨어지지
 //			않을 때 true인 조건식
 //				int year = 8000;
-//				if(year % 400 == 0 || (year % 4 == 0 && year % 100 != 0)) {}
+//				if(year % 400 == 0 || year % 4 == 0 && (year % 100 != 0)) {}
 //			7. boolean형 변수 powerOn가 false일 때 true인 조건식
 //				boolean powerOn = false;
 //				if(powerOn == true) {}
@@ -33,7 +35,7 @@ public class Exam04 {
 //		[4-2] 1부터 20까지의 정수 중에서 2 또는 3의 배수가 아닌 수의 총합을 구하시오.
 //			int sum = 0;
 //			for(int i = 1; i <=20; i++){
-//				if(i % 2 == 0 || i % 3 == 0){
+//				if(i % 2 != 0 || i % 3 != 0){
 //					continue;
 //				} else{
 //					sum += i;
@@ -143,6 +145,26 @@ public class Exam04 {
 //				}
 //			}
 //		
+//		[실행결과]
+//		15
+		
+//		[4-10] int타입의 변수 num 이 있을 때, 각 자리의 합을 더한 결과를 출력하는 코드를
+//		완성하라. 만일 변수 num의 값이 12345라면, ‘1+2+3+4+5’의 결과인 15를 출력하라. (1)
+//		에 알맞은 코드를 넣으시오.
+//		[주의] 문자열로 변환하지 말고 숫자로만 처리해야 한다.
+//		[연습문제]/ch4/Exercise4_10.java
+//			class Exercise4_10 {
+//				public static void main(String[] args) {
+//					int num = 12345;
+//					int sum = 0;
+//					for(int i = 0; i < 5; i++){
+//						sum += num % 10;
+//						num /= 10;
+//					}
+//					System.out.println("sum="+sum);
+//				}
+//			}
+		
 //		[실행결과]
 //		15
 		
