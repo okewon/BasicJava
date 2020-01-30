@@ -183,19 +183,24 @@ public class Exam04 {
 //			class Exercise4_14{
 //				public static void main(String[] args){
 					// 1~100사이의 임의의 값을 얻어서 answer에 저장한다.
-					int answer = /* (1) */;
-					int input = 0; // 사용자입력을 저장할 공간
-					int count = 0; // 시도횟수를 세기위한 변수
-					// 화면으로 부터 사용자입력을 받기 위해서 Scanner클래스 사용
-					java.util.Scanner s = new java.util.Scanner(System.in);
-					do {
-					count++;
-					System.out.print("1과 100사이의 값을 입력하세요 :");
-					input = s.nextInt(); // 입력받은 값을 변수 input에 저장한다.
-					/*
-					(2) 알맞은 코드를 넣어 완성하시오.
-					*/
-					} while(true); // 무한반복문
+//					int answer = (int) (Math.random()*100) + 1;
+//					int input = 0; // 사용자입력을 저장할 공간
+//					int count = 0; // 시도횟수를 세기위한 변수
+//					// 화면으로 부터 사용자입력을 받기 위해서 Scanner클래스 사용
+//					java.util.Scanner s = new java.util.Scanner(System.in);
+//					do {
+//						count++;
+//						System.out.print("1과 100사이의 값을 입력하세요 :");
+//						input = s.nextInt(); // 입력받은 값을 변수 input에 저장한다.
+//						if(answer == input){
+//							System.out.println("정답입니다!");
+//							break;
+//						} else{
+//							System.out.println("틀렸습니다!");
+//							continue;
+//						}
+//					} while(true); // 무한반복문
+//					System.out.println(count + "번만에 맞추셨습니다!");
 //				} // end of main
 //			} // end of class HighLow
 		
@@ -219,20 +224,21 @@ public class Exam04 {
 //		다. (1)에 알맞은 코드를 넣어서 프로그램을 완성하시오.
 //		[Hint] 나머지 연산자를 이용하시오.
 //		[연습문제]/ch4/Exercise4_15.java
-			class Exercise4_15{
-				public static void main(String[] args){
-					int number = 12321;
-					int tmp = number;
-					int result =0; // 변수 number를 거꾸로 변환해서 담을 변수
-					while(tmp !=0) {
-					/*
-					(1) 알맞은 코드를 넣어 완성하시오.
-					*/
-					}
-					if(number == result)
-					System.out.println( number + "는 회문수 입니다.");
-					else
-					System.out.println( number + "는 회문수가 아닙니다.");
+//			class Exercise4_15{
+//				public static void main(String[] args){
+//					int number = 12321;
+//					int tmp = number;
+//					int result =0; // 변수 number를 거꾸로 변환해서 담을 변수
+//					int multiply = 10000;
+//					while(tmp !=0) {
+//						result += (tmp % 10) * multiply;
+//						tmp = tmp / 10;
+//						multiply /= 10;
+//					}
+//					if(number == result)
+//						System.out.println( number + "는 회문수 입니다.");
+//					else
+//						System.out.println( number + "는 회문수가 아닙니다.");
 //				} // main
 //			}
 			
