@@ -14,7 +14,13 @@ public class Baseball {
 		int count = 0;
 		Scanner s = new Scanner(System.in);
 
-
+		if(num1 == num2 && num1 == num3){
+			num1 = (int) (Math.random()*9) + 1;
+			num2 = (int) (Math.random()*9)+1;
+			num3 = (int) (Math.random()*9)+1;
+		}
+		
+		
 		do{
 			System.out.print("숫자 세개를 입력해주세요. >> ");
 			answer1 = Integer.parseInt(s.nextLine());
@@ -58,6 +64,7 @@ public class Baseball {
 			out = 0;
 			count++;
 		} while(strike != 3);
+		System.out.println(answer1 + ", " + answer2 + ", " + answer3);
 		System.out.println(num1 + ", " + num2 + ", " + num3);
 	}
 
