@@ -14,11 +14,13 @@ public class Baseball {
 		int count = 0;
 		Scanner s = new Scanner(System.in);
 
-		if(num1 == num2 && num1 == num3){
-			num1 = (int) (Math.random()*9) + 1;
+		do{
 			num2 = (int) (Math.random()*9)+1;
+		}while(num1 ==  num2 || num2 == num3);
+		
+		do{
 			num3 = (int) (Math.random()*9)+1;
-		}
+		}while(num1 ==  num2 || num2 == num3);
 		
 		
 		do{
