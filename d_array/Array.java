@@ -172,48 +172,13 @@ public class Array {
 		max = Integer.parseInt(s.nextLine());
 		min = Integer.parseInt(s.nextLine());
 		int repeatCnt = Integer.parseInt(s.nextLine());
-		int iArray6[] = new int[repeatCnt];
-		int[] cnt2 = new int[max-min];
+		int[] cnt2 = new int[max-min + 1];
 		
 		for(int i = 0; i < repeatCnt; i++){
-			iArray6[i] = (int) ((Math.random() * max - min + 1) + min);
-		}
-		System.out.println(Arrays.toString(iArray6));
-		
-		
-		for(int j : iArray6){
-			for(int i = 0; i <= max - min; i++){
-				if(j == min + i){
-					cnt2[i]++;
-				}
-			}
+			int random = (int) (Math.random() * max - min + 1) + min;
+			cnt2[random - min]++;
 		}
 		System.out.println(Arrays.toString(cnt2));
-//		for(int i : iArray6){
-//			if(i == 1)
-//				cnt[0]++;
-//			else if(i == 2)
-//				cnt[1]++;
-//			else if(i == 3)
-//				cnt[2]++;
-//			else if(i == 4)
-//				cnt[3]++;
-//			else if(i == 5)
-//				cnt[4]++;
-//			else if(i == 6)
-//				cnt[5]++;
-//			else if(i == 7)
-//				cnt[6]++;
-//			else if(i == 8)
-//				cnt[7]++;
-//			else if(i == 9)
-//				cnt[8]++;
-//			else if(i == 10)
-//				cnt[9]++;
-//		}
-		 
-		
-		
 		
 		
 	}
