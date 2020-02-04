@@ -45,20 +45,24 @@ public class Sort {
 		shuffle(numbers);
 		System.out.println("Before Insert Sort : " + Arrays.toString(numbers));
 		insertSort(numbers);
-		System.out.println("After Bublle Sort : " + Arrays.toString(numbers));
+		System.out.println("After Insert Sort : " + Arrays.toString(numbers));
 		
 		
 	}
 
 	private static void insertSort(int[] numbers) {
 		// TODO Auto-generated method stub
-		int num = 1, temp;
-		for(int i = 0; i < 0 + num && num < numbers.length; i++){
-			temp = numbers[num];
-			if(temp < numbers[i]){
-				numbers[i] = temp;				
+		for(int i = 1; i < numbers.length; i++){
+			int temp = numbers[i];
+			int j = 0;
+			for(j = i - 1; j >= 0; j--){
+				if(temp < numbers[j]){
+					numbers[j + 1] = numbers[j];
+				} else{
+					break;
+				}
 			}
-			num++;
+			numbers[j + 1] = temp;
 		}
 	}
 
