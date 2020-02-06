@@ -87,16 +87,16 @@ public class Score {
 		}
 		
 		System.out.println("석차\t이름\tJava\tOracle\tHTML\tCSS\tJQuery\tJSP\t총점\t평균\t등급");
-		int rank = 4;
-		for(int i = 0; i < scores.length; i++){
-				System.out.print(rank + "\t" + name[i] + '\t');
+		int rank = 0;
+		for(int i = scores.length - 1; i >= 0; i--){
+				System.out.print((rank + 1) + "\t" + name[i] + '\t');
 				for(int j = 0; j < scores[i].length; j++){
 					System.out.print(scores[i][j] + "\t");
 					
 				}
 				System.out.println(sum[i] + "\t" + avg[i] + "\t" + grade[i]);
 				System.out.println();
-				rank--;
+				rank++;
 		}
 		
 		for(int i = 0; i < scores[0].length; i++){
