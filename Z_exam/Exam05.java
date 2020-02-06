@@ -1,11 +1,13 @@
 package Z_exam;
 
+import java.util.Scanner;
+
 public class Exam05 {
 
 	public static void main(String[] args) {
 		
 //		[5-1] 다음은 배열을 선언하거나 초기화한 것이다. 잘못된 것을 고르고 그 이유를 설명하시오.
-//		a. int[] arr[];				※ a,b
+//		a. int[] arr[];				※ d, e
 //		b. int[] arr = {1,2,3,};
 //		c. int[] arr = new int[5];
 //		d. int[] arr = new int[5]{1,2,3,4,5};
@@ -134,18 +136,27 @@ public class Exam05 {
 //						System.exit(0);
 //					}
 //					// 문자열을 숫자로 변환한다. 입력한 값이 숫자가 아닐 경우 예외가 발생한다.
-//					int money = Integer.parseInt(args[0]);
+//					int money = Integer.parseInt("3510");
 //					System.out.println("money="+money);
 //					int[] coinUnit = {500, 100, 50, 10 }; // 동전의 단위
 //					int[] coin = {5, 5, 5, 5}; // 단위별 동전의 개수
+//					int[] needCoin = new int[coinUnit.length];
 //					for(int i=0;i<coinUnit.length;i++) {
-//						int coinNum = 0;
+//						int coinNum = money / coinUnit[i];
+//						if(coin[i] > coinNum){
+//							coin[i] -= coinNum;
+//						} else{
+//							coinNum = coin[i];
+//							coin[i] -= coin[i];
+//						}
+//						money = money - (coinNum * coinUnit[i]);
 //						/* (1) 아래의 로직에 맞게 코드를 작성하시오.
 //						1. 금액(money)을 동전단위로 나눠서 필요한 동전의 개수(coinNum)를 구한다.
 //						2. 배열 coin에서 coinNum만큼의 동전을 뺀다.
 //						(만일 충분한 동전이 없다면 배열 coin에 있는 만큼만 뺀다.)
 //						3. 금액에서 동전의 개수(coinNum)와 동전단위를 곱한 값을 뺀다.
 //						*/
+//						
 //						System.out.println(coinUnit[i]+"원: "+coinNum);
 //					}
 //					if(money > 0) {
@@ -186,12 +197,17 @@ public class Exam05 {
 //					int[] answer = { 1,4,4,3,1,4,4,2,1,3,2 };
 //					int[] counter = new int[4];
 //					for(int i=0; i < answer.length;i++) {
-//						
+//						for(int j = 1; j <= 4; j++){
+//							if(answer[i] == j){
+//								counter[j - 1]++;
+//							}
+//						}
 //					}
 //					for(int i=0; i < counter.length;i++) {
-//						/*
-//						(2) 알맞은 코드를 넣어 완성하시오.
-//						*/
+//						System.out.print(counter[i]);
+//						for(int j = 0; j < counter[i]; j++){
+//							System.out.print("*");
+//						}
 //						System.out.println();
 //					}
 //				} // end of main
@@ -202,7 +218,184 @@ public class Exam05 {
 //		2**
 //		2**
 //		4****	
-					
+				
+//		[5-9] 주어진 배열을 시계방향으로 90도 회전시켜서 출력하는 프로그램을 완성하시오.
+//		[연습문제]/ch5/Exercise5_9.java
+//			class Exercise5_9 {
+//				public static void main(String[] args) {
+//					char[][] star = {
+//					{'*','*',' ',' ',' '},
+//					{'*','*',' ',' ',' '},
+//					{'*','*','*','*','*'},
+//					{'*','*','*','*','*'}
+//					};
+//					char[][] result = new char[star[0].length][star.length];
+//					for(int i=0; i < star.length;i++) {
+//						for(int j=0; j < star[i].length;j++) {
+//							System.out.print(star[i][j]);
+//						}
+//						System.out.println();
+//					}
+//					System.out.println();
+//					for(int i=0; i < star.length;i++) {
+//						for(int j=0; j < star[i].length;j++) {
+//						/*
+//						(1) 알맞은 코드를 넣어 완성하시오.
+//						*/ }
+//					}
+//					for(int i=0; i < result.length;i++) {
+//						for(int j=0; j < result[i].length;j++) {
+//						System.out.print(result[i][j]);
+//						}
+//						System.out.println();
+//					}
+//		} // end of main
+//		} // end of class
+//		[실행결과]
+//		**
+//		**
+//		*****
+//		*****
+//		
+//		****
+//		****
+//		**
+//		**
+//		**
+		
+//		[5-10] 다음은 알파벳과 숫자를 아래에 주어진 암호표로 암호화하는 프로그램이다.
+//		(1)에 알맞은 코드를 넣어서 완성하시오.
+//		[연습문제]/ch5/Exercise5_10.java
+//			class Exercise5_10 {
+//				public static void main(String[] args) {
+//					char[] abcCode = { '`','~','!','@','#','$','%','^','&','*',
+//					'(',')','-','_','+','=','|','[',']','{','}',';',':',',','.','/'};
+//					// 0 1 2 3 4 5 6 7 8 9
+//					char[] numCode = {'q','w','e','r','t','y','u','i','o','p'};
+//					String src = "abc123";
+//					String result = "";
+//					// 문자열 src의 문자를 charAt()으로 하나씩 읽어서 변환 후 result에 저장
+//					for(int i=0; i < src.length();i++) {
+//						char ch = src.charAt(i);
+//						if(ch >= 'a' && ch <= 'z'){
+//							result += abcCode[(int) ch - 97] + "";
+//						} else if(ch >= '0' && ch <= '9'){
+//							result += numCode[(int) ch - 48] + "";
+//						}
+//					}
+//					System.out.println("src:"+src);
+//					System.out.println("result:"+result);
+//				} // end of main
+//			} // end of class
+//		
+//		[실행결과]
+//		src:abc123
+//		result:`~!wer
+		
+//		[5-11] 주어진 2차원 배열의 데이터보다 가로와 세로로 1이 더 큰 배열을 생성해서 배열의 행과 열의 마지막 요소에 각 열과 행의 총합을 저장하고 출력하는 프로그램이다. 
+//		(1)에 알맞은 코드를 넣어서 완성하시오.
+//		[연습문제]/ch5/Exercise5_11.java
+//			class Exercise5_11 {
+//				public static void main(String[] args) {
+//					int[][] score = {{100, 100, 100}, {20, 20, 20}, {30, 30, 30}, {40, 40, 40}, {50, 50, 50}};
+//					int[][] result = new int[score.length+1][score[0].length+1];
+//					for(int i=0; i < score.length;i++) {
+//						for(int j=0; j < score[i].length;j++) {
+//							result[i][j] = score[i][j];
+//							result[i][3] += score[i][j];
+//							result[5][j] += score[i][j];
+//							result[5][3] += score[i][j];
+//						}
+//					}
+//					for(int i=0; i < result.length;i++) {
+//						for(int j=0; j < result[i].length;j++) {
+//						System.out.printf("%4d",result[i][j]);
+//						}
+//						System.out.println();
+//					}
+//				} // main
+//			}
+//		[실행결과]
+//		100 100 100 300
+//		20 	20 	20 	60
+//		30 	30 	30 	90
+//		40 	40 	40 	120
+//		50 	50 	50 	150
+//		240 240 240 720
+		
+//		[5-12] 예제5-23을 변경하여, 아래와 같은 결과가 나오도록 하시오.
+//		class Exercise5_13 {
+//			public static void main(String args[]) {
+				int correction = 0, count = 0;
+				String[] words = { "television", "computer", "mouse", "phone" };
+				String[] korAnswer = {"텔레비전", "컴퓨터", "입", "핸드폰"};
+				Scanner scanner = new Scanner(System.in);
+				for(int i=0;i<words.length;i++) {
+					++count;
+					int random = (int) Math.random() * 4;
+//					char[] question = words[i].toCharArray(); // String을 char[]로 변환
+					String korTemp = korAnswer[0];
+					korAnswer[0] = korAnswer[random];
+					korAnswer[random] = korTemp;
+					String temp = words[0];
+					words[0] = words[random];
+					words[random] = temp;
+					System.out.print("Q" + count + ". " + words[i] +"의 뜻은? ");
+					String answer = scanner.nextLine();
+					// trim()으로 answer의 좌우 공백을 제거한 후, equals로 word[i]와 비교
+					if(korAnswer[i].equals(answer)){
+						System.out.println("정답입니다.");
+						correction++;
+					} else{
+						System.out.println("틀렸습니다. 정답은" + korAnswer[i] + "입니다.");
+					}
+				}
+				System.out.println("전체 " + count +" 중 " + correction +"문제 맞추셨습니다.");
+//			} // main의 끝
+//		}
+		
+//		[실행결과]
+//		Q1. chair의 뜻은? dmlwk
+//		틀렸습니다. 정답은 의자입니다
+//		Q2. computer의 뜻은? 컴퓨터
+//		정답입니다.
+//		Q3. integer의 뜻은? 정수
+//		정답입니다.
+//		전체 3문제 중 2문제 맞추셨습니다.
+		
+//		[5-13] 단어의 글자위치를 섞어서 보여주고 원래의 단어를 맞추는 예제이다. 실행결과와
+//		같이 동작하도록 예제의 빈 곳을 채우시오.
+//		[연습문제5-13]/ch5/Excercise5_13.java
+//			class Exercise5_13 {
+//				public static void main(String args[]) {
+//					String[] words = { "television", "computer", "mouse", "phone" };
+//					Scanner scanner = new Scanner(System.in);
+//					for(int i=0;i<words.length;i++) {
+//						int random = (int) Math.random() * 4;
+//						char[] question = words[i].toCharArray(); // String을 char[]로 변환
+//						String temp = words[0];
+//						words[0] = words[random];
+//						words[random] = temp;
+//						System.out.printf("Q%d. %s의 정답을 입력하세요.>",i+1, new String(question));
+//						String answer = scanner.nextLine();
+//						// trim()으로 answer의 좌우 공백을 제거한 후, equals로 word[i]와 비교
+//						if(words[i].equals(answer.trim()))
+//							System.out.printf("맞았습니다.%n%n");
+//						else
+//							System.out.printf("틀렸습니다.%n%n");
+//					}
+//				} // main의 끝
+//			}
+//		[실행결과]
+//		Q1. lvtsieeoin의 정답을 입력하세요.>television
+//		맞았습니다.
+//		Q2. otepcumr의 정답을 입력하세요.>computer
+//		맞았습니다.
+//		Q3. usemo의 정답을 입력하세요.>asdf
+//		틀렸습니다.
+//		Q4. ohpne의 정답을 입력하세요.>phone
+//		맞았습니다.
+		
 
 	}
 
