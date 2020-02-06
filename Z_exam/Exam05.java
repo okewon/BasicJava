@@ -347,7 +347,7 @@ public class Exam05 {
 						System.out.println("정답입니다.");
 						correction++;
 					} else{
-						System.out.println("틀렸습니다. 정답은" + korAnswer[i] + "입니다.");
+						System.out.println("틀렸습니다. 정답은 " + korAnswer[i] + "입니다.");
 					}
 				}
 				System.out.println("전체 " + count +" 중 " + correction +"문제 맞추셨습니다.");
