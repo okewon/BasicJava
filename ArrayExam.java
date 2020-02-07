@@ -15,16 +15,16 @@ public class ArrayExam {
 		System.out.println("sum = " + sum);
 		
 		//문제2. 5명의 이름을 입력받아 배열에 저장하는 프로그램을 작성하세요
-		String[] name = new String[5];
-		for(int i = 0; i < name.length; i++){
-			System.out.print((i + 1) + "번째 사람의 이름을 입력하시오. >> ");
-			name[i] = sc.nextLine();
-		}
-		
-		for(int i = 0; i < name.length; i++){
-			System.out.print(name[i] + "\t");
-		}
-		System.out.println();
+//		String[] name = new String[5];
+//		for(int i = 0; i < name.length; i++){
+//			System.out.print((i + 1) + "번째 사람의 이름을 입력하시오. >> ");
+//			name[i] = sc.nextLine();
+//		}
+//		
+//		for(int i = 0; i < name.length; i++){
+//			System.out.print(name[i] + "\t");
+//		}
+//		System.out.println();
 		
 		//문제3. score배열의 최대값, 최소값 구하기
 		int[] score = { 79, 88, 97, 33, 100, 55, 95 };

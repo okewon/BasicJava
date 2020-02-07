@@ -326,31 +326,31 @@ public class Exam05 {
 //		[5-12] 예제5-23을 변경하여, 아래와 같은 결과가 나오도록 하시오.
 //		class Exercise5_13 {
 //			public static void main(String args[]) {
-				int correction = 0, count = 0;
-				String[] words = { "television", "computer", "mouse", "phone" };
-				String[] korAnswer = {"텔레비전", "컴퓨터", "입", "핸드폰"};
-				Scanner scanner = new Scanner(System.in);
-				for(int i=0;i<words.length;i++) {
-					++count;
-					int random = (int) Math.random() * 4;
+//				int correction = 0, count = 0;
+//				String[] words = { "television", "computer", "mouse", "phone" };
+//				String[] korAnswer = {"텔레비전", "컴퓨터", "입", "핸드폰"};
+//				Scanner scanner = new Scanner(System.in);
+//				for(int i=0;i<words.length;i++) {
+//					++count;
+//					int random = (int) Math.random() * 4;
 //					char[] question = words[i].toCharArray(); // String을 char[]로 변환
-					String korTemp = korAnswer[0];
-					korAnswer[0] = korAnswer[random];
-					korAnswer[random] = korTemp;
-					String temp = words[0];
-					words[0] = words[random];
-					words[random] = temp;
-					System.out.print("Q" + count + ". " + words[i] +"의 뜻은? ");
-					String answer = scanner.nextLine();
-					// trim()으로 answer의 좌우 공백을 제거한 후, equals로 word[i]와 비교
-					if(korAnswer[i].equals(answer)){
-						System.out.println("정답입니다.");
-						correction++;
-					} else{
-						System.out.println("틀렸습니다. 정답은 " + korAnswer[i] + "입니다.");
-					}
-				}
-				System.out.println("전체 " + count +" 중 " + correction +"문제 맞추셨습니다.");
+//					String korTemp = korAnswer[0];
+//					korAnswer[0] = korAnswer[random];
+//					korAnswer[random] = korTemp;
+//					String temp = words[0];
+//					words[0] = words[random];
+//					words[random] = temp;
+//					System.out.print("Q" + count + ". " + words[i] +"의 뜻은? ");
+//					String answer = scanner.nextLine();
+//					// trim()으로 answer의 좌우 공백을 제거한 후, equals로 word[i]와 비교
+//					if(korAnswer[i].equals(answer)){
+//						System.out.println("정답입니다.");
+//						correction++;
+//					} else{
+//						System.out.println("틀렸습니다. 정답은 " + korAnswer[i] + "입니다.");
+//					}
+//				}
+//				System.out.println("전체 " + count +" 중 " + correction +"문제 맞추셨습니다.");
 //			} // main의 끝
 //		}
 		
