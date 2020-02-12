@@ -27,16 +27,19 @@ public class Exam06 {
 //					System.out.println(card2.info());
 //				}
 //			}
-//			class SutdaCard {				
+//			class SutdaCard {	
+//				int num;
+//				boolean isKwang;
 //				SutdaCard(int num, boolean isKwang) {
-//					
+//					this.num = num;
+//					this.isKwang = isKwang;
 //				}
 //				SutdaCard(){
-//					this();
+//					this(1, true);
 //				}
 //				
-//				void info(){
-//					System.out.println();
+//				String info(){
+//					return num + (this.isKwang? "K" : "");
 //				}
 //			}
 //		[실행결과]
@@ -90,7 +93,7 @@ public class Exam06 {
 //				}
 //				
 //				float getAverage(){
-//					return (kor + eng + math) / (float) 3;
+//					return (int)((kor + eng + math) / (float) 3 * 10 + 0.5) / 10f;
 //				}
 //			}
 //		[실행결과]
@@ -108,6 +111,8 @@ public class Exam06 {
 //			}
 //			class Student {
 //				String name;
+//				int sum = 0;
+//				float avg = 0.0f;
 //				int a, b, c, d, e;
 //				Student(String name, int a, int b, int c, int d, int e){
 //					this.name = name;
@@ -116,10 +121,12 @@ public class Exam06 {
 //					this.c = c;
 //					this.d = d;
 //					this.e = e;
+//					sum = a + b + c + d + e;
+//					avg = sum / (float) 5;
 //				}
 //				
 //				String info(){
-//					return name + "," + a + "," + b + "," + c + "," + d + "," + e;
+//					return name + "," + a + "," + b + "," + c + "," + d + "," + e + ", " + sum + ", " + avg;
 //				}
 //			}
 //		[실행결과]
@@ -205,14 +212,14 @@ public class Exam06 {
 //			}
 
 //		[6-10] 다음 중 생성자에 대한 설명으로 옳지 않은 것은? (모두 고르시오)
-//		a. 모든 생성자의 이름은 클래스의 이름과 동일해야한다.		c,e
+//		a. 모든 생성자의 이름은 클래스의 이름과 동일해야한다.		c, e
 //		b. 생성자는 객체를 생성하기 위한 것이다.
 //		c. 클래스에는 생성자가 반드시 하나 이상 있어야 한다.
 //		d. 생성자가 없는 클래스는 컴파일러가 기본 생성자를 추가한다.
 //		e. 생성자는 오버로딩 할 수 없다.
 //		
 //		[6-11] 다음 중 this에 대한 설명으로 맞지 않은 것은? (모두 고르시오)
-//		a. 객체 자신을 가리키는 참조변수이다.		a,b
+//		a. 객체 자신을 가리키는 참조변수이다.		b, d
 //		b. 클래스 내에서라면 어디서든 사용할 수 있다.
 //		c. 지역변수와 인스턴스변수를 구별할 때 사용한다.
 //		d. 클래스 메서드 내에서는 사용할 수 없다.
