@@ -49,6 +49,38 @@ public class inheritance {
 		 *  - 객체 생성을 제한하여 하나의 객체만 사용하게 하는 디자인 패턴디아.
 		 *  - 객체들 간에 객체를 공유하기 위해 사용한다.
 		 */
+		
+		AccessModifier am = new AccessModifier();
+		
+		System.out.println(am.publicVar);
+		am.publicMethod();
+		
+		System.out.println(am.protectedVar);
+		am.protectedMethod();
+		
+		System.out.println(am.defaultVar);
+		am.defaultMethod();
+		
+//		System.out.println(am.privateVar);
+//		am.privateMethod();
+		
+		Time time = new Time();
+		
+//		time.setHour(14);
+//		time.setMinute(47);
+		time.setSecond(100000);
+		
+		System.out.println(time);
+		
+		Singleton s = Singleton.getInstance();
+		
+		System.out.println(s);
+		System.out.println(Singleton.getInstance());
+		
+		System.out.println(new inheritance());
+		System.out.println(new inheritance());
+		
+		
 	}
 
 }
